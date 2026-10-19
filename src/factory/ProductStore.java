@@ -2,6 +2,7 @@ package factory;
 
 import abstractFactory.NotaFiscalAbstractFactory;
 import model.Product;
+import singleton.StoreManager;
 
 public abstract class ProductStore {
 
@@ -17,7 +18,7 @@ public abstract class ProductStore {
 
         product.getProduct();
         product.getPrice();
-
+        StoreManager.getInstance().registerSale(product);
         return product;
     }
 

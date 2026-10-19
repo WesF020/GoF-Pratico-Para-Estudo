@@ -15,7 +15,7 @@ public class StoreManager {
     }
     public static StoreManager getInstance() {
         if (instance == null) {
-            new StoreManager();
+            instance = new StoreManager();
         }
         return instance;
     }
